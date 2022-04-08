@@ -14,8 +14,8 @@ int nScreenHeight = 40;			// Console Screen Size Y (rows)
 int nMapWidth = 16;				// World Dimensions
 int nMapHeight = 16;
 
-float fPlayerX = 1.f;			// Player Start Position
-float fPlayerY = 1.f;
+float fPlayerX = 1.75f;			// Player Start Position
+float fPlayerY = 2.0f;
 float fPlayerA = 0.0f;			// Player Start Rotation
 float fFOV = 3.14159f / 4.0f;	// Field of View
 float fDepth = 16.0f;			// Maximum rendering distance
@@ -31,7 +31,7 @@ int main()
 
 	// Create Map of world space # = wall block, . = space
 	wstring map;
-	Labyrinth labyrinth(10, 10);
+	Labyrinth labyrinth(16, 16);
 	labyrinth.genWay();
 	map = labyrinth.draw();
 	/*map += L"#########.......";
